@@ -86,8 +86,10 @@
     <Compile Include="Buffs\Globals\Summoners\SummonerHeal\HealCheck.cs" />
     <Compile Include="Buffs\Globals\Summoners\SummonerHeal\HealSpeed.cs" />
     <Compile Include="Buffs\Globals\Summoners\SummonerRevive\SummonerReviveSpeedBoost.cs" />
+    <Compile Include="Buffs\Globals\Summoners\SummonerTeleport\SummonerTeleport.cs" />
+    <Compile Include="Buffs\Globals\Summoners\SummonerTeleport\Teleport_Target.cs" />
     <Compile Include="Buffs\Items\LightningRod\LightningRod.cs" />
-    <Compile Include="Buffs\Items\Recall\Recall.cs" />
+    <Compile Include="Champions\Items\Recall.cs" />
     <Compile Include="Buffs\Items\YoumuusGhostblade\YoumuusGhostblade.cs" />
     <Compile Include="Champions\Akali\E.cs" />
     <Compile Include="Champions\Akali\Passive.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="Champions\Summoners\SummonerMana.cs" />
     <Compile Include="Champions\Summoners\SummonerRevive.cs" />
     <Compile Include="Champions\Summoners\SummonerSmite.cs" />
+    <Compile Include="Champions\Summoners\SummonerTeleport.cs" />
     <Compile Include="Champions\Taric\E.cs" />
     <Compile Include="Champions\Taric\Passive.cs" />
     <Compile Include="Champions\Taric\Q.cs" />
