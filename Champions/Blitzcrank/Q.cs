@@ -46,6 +46,12 @@ namespace Spells
                 var trueCoords = current + range;
                 DashToLocation((ObjAiBase) target, trueCoords.X, trueCoords.Y,
                     spell.SpellData.MissileSpeed, true);
+                ((ObjAiBase)target).Stats.MoveSpeed.FlatBonus += spell.SpellData.MissileSpeed;
+                CreateTimer(0.2f, () =>
+                {
+                    ((ObjAiBase)target).Stats.MoveSpeed.FlatBonus -= spell.SpellData.MissileSpeed;
+                    CancelDash((ObjAiBase)target);
+                });
             }
 
             projectile.SetToRemove();

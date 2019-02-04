@@ -1,0 +1,13 @@
+{
+    "MetaData": {
+        "ContentFormatVersion": 4,
+        "Id": "EkkoSlow",
+        "Name": "EkkoSlow",
+        "ResourcePath": "DATA/Characters/Ekko/Spells/EkkoSlow.inibin"
+    },
+    "Values": {
+        "BuffData": {
+			"DynamicTooltip": "game_buff_tooltip_EkkoSlow"
+        }
+    }
+}

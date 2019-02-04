@@ -1,0 +1,13 @@
+{
+    "MetaData": {
+        "ContentFormatVersion": 4,
+        "Id": "EkkoStacks",
+        "Name": "EkkoStacks",
+        "ResourcePath": "DATA/Characters/Ekko/Spells/EkkoStacks.inibin"
+    },
+    "Values": {
+        "BuffData": {
+			"DynamicTooltip": "game_buff_tooltip_EkkoStacks"
+        }
+    }
+}

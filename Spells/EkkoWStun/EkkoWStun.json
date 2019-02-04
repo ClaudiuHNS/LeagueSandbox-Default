@@ -1,0 +1,13 @@
+{
+    "MetaData": {
+        "ContentFormatVersion": 4,
+        "Id": "EkkoWStun",
+        "Name": "EkkoWStun",
+        "ResourcePath": "DATA/Characters/Ekko/Spells/EkkoWStun.inibin"
+    },
+    "Values": {
+        "BuffData": {
+			"DynamicTooltip": "game_buff_tooltip_EkkoWStun"
+        }
+    }
+}

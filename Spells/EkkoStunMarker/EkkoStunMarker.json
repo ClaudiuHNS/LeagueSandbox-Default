@@ -1,0 +1,13 @@
+{
+    "MetaData": {
+        "ContentFormatVersion": 4,
+        "Id": "EkkoStunMarker",
+        "Name": "EkkoStunMarker",
+        "ResourcePath": "DATA/Characters/Ekko/Spells/EkkoStunMarker.inibin"
+    },
+    "Values": {
+        "BuffData": {
+			"DynamicTooltip": "game_buff_tooltip_EkkoStunMarker"
+        }
+    }
+}

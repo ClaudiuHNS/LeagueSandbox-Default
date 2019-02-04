@@ -31,7 +31,7 @@ namespace Spells
             var trueCoords = current + range;
 
             //TODO: Dash to the correct location (in front of the enemy IChampion) instead of far behind or inside them
-            DashToLocation(owner, trueCoords.X, trueCoords.Y, 2200, false, "Attack1");
+            DashToLocation(owner, target.X, target.Y, 2200, false, "SPELL4");
             AddParticleTarget(owner, "akali_shadowDance_tar.troy", target, 1, "");
         }
 

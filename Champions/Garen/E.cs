@@ -19,6 +19,7 @@ namespace Spells
 
         public void OnStartCasting(IChampion owner, ISpell spell, IAttackableUnit target)
         {
+            spell.SpellAnimation("SPELL3", owner);
             var p = AddParticleTarget(owner, "Garen_Base_E_Spin.troy", owner, 1);
             var visualBuff = AddBuffHudVisual("GarenE", 3.0f, 1,
                 BuffType.COMBAT_ENCHANCER, owner, 3.0f);

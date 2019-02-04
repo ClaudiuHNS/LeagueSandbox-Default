@@ -1,0 +1,13 @@
+{
+    "MetaData": {
+        "ContentFormatVersion": 4,
+        "Id": "EkkoRInvuln",
+        "Name": "EkkoRInvuln",
+        "ResourcePath": "DATA/Characters/Ekko/Spells/EkkoRInvuln.inibin"
+    },
+    "Values": {
+        "BuffData": {
+			"DynamicTooltip": "game_buff_tooltip_EkkoRInvuln"
+        }
+    }
+}

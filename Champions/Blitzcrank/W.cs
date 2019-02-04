@@ -1,8 +1,13 @@
+using System;
+using GameServerCore.Enums;
 using GameServerCore.Domain.GameObjects;
-using static LeagueSandbox.GameServer.API.ApiFunctionManager;
 using LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI;
+using LeagueSandbox.GameServer.GameObjects.Missiles;
 using GameServerCore.Domain;
 using LeagueSandbox.GameServer.Scripting.CSharp;
+using LeagueSandbox.GameServer.API;
+using static LeagueSandbox.GameServer.API.ApiFunctionManager;
+using LeagueSandbox.GameServer.GameObjects;
 
 namespace Spells
 {
@@ -18,8 +23,8 @@ namespace Spells
 
         public void OnStartCasting(IChampion owner, ISpell spell, IAttackableUnit target)
         {
-            var p = AddParticleTarget(owner, "Overdrive_buf.troy", target, 1);
-            ((ObjAiBase) target).AddBuffGameScript("Overdrive", "Overdrive", spell, 8.0f);
+            owner.AddBuffGameScript("Overdrive", "Overdrive", spell, 8.0f, true);
+            var p = AddParticleTarget(owner, "Overdrive_buf.troy", owner, 1);
             CreateTimer(8.0f, () =>
             {
                 RemoveParticle(p);

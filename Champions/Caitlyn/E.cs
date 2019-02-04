@@ -39,6 +39,12 @@ namespace Spells
             var dash = Vector2.Negate(to) * 500;
             var dashCoords = current + dash;
             DashToLocation(owner, dashCoords.X, dashCoords.Y, 1000, true, "Spell3b");
+            owner.Stats.MoveSpeed.FlatBonus += 1000;
+            CreateTimer(0.15f, () =>
+            {
+                owner.Stats.MoveSpeed.FlatBonus -= 1000;
+                CancelDash(owner);
+            });
             spell.AddProjectile("CaitlynEntrapmentMissile", owner.X, owner.Y, trueCoords.X, trueCoords.Y);
         }
 

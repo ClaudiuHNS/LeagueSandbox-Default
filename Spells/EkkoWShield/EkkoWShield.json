@@ -1,0 +1,13 @@
+{
+    "MetaData": {
+        "ContentFormatVersion": 4,
+        "Id": "EkkoWShield",
+        "Name": "EkkoWShield",
+        "ResourcePath": "DATA/Characters/Ekko/Spells/EkkoWShield.inibin"
+    },
+    "Values": {
+        "BuffData": {
+			"DynamicTooltip": "game_buff_tooltip_EkkoWShield"
+        }
+    }
+}
