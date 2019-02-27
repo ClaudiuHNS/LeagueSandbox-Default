@@ -6,6 +6,7 @@ using LeagueSandbox.GameServer.GameObjects.AttackableUnits.AI;
 using GameServerCore.Domain;
 using LeagueSandbox.GameServer.Scripting.CSharp;
 using System;
+using LeagueSandbox.GameServer.GameObjects;
 
 namespace Spells
 {
@@ -13,6 +14,8 @@ namespace Spells
     {
         public float finaldamage;
         public Vector2 castcoords;
+        private Particle huntParticle;
+        private GameScriptTimer hunt_timer;
         public void OnActivate(IChampion owner)
         {
         }
@@ -54,9 +57,27 @@ namespace Spells
                 finaldamage = (basedamage + (basedamage * 2));
             }
             target.TakeDamage(owner, finaldamage, DamageType.DAMAGE_TYPE_MAGICAL, DamageSource.DAMAGE_SOURCE_SPELL, false);
+            AddParticleTarget(owner, "Nidalee_Base_Q_Tar.troy", target, 1, "C_BUFFBONE_GLB_CHEST_LOC");
             if (!target.IsDead)
             {
-                AddParticleTarget(owner, "Nidalee_Base_Q_Tar.troy", target, 1, "C_BUFFBONE_GLB_CHEST_LOC");
+                if (huntParticle != null)
+                {
+                    RemoveParticle(huntParticle);
+                    RemoveTimer(hunt_timer);
+                    huntParticle = AddParticleTarget(owner, "Nidalee_Base_Q_Buf.troy", target, 1, "C_BUFFBONE_GLB_Overhead_LOC");
+                    hunt_timer = CreateTimer(4.0f, () =>
+                    {
+                        RemoveParticle(huntParticle);
+                    });
+                }
+                else
+                {
+                    huntParticle = AddParticleTarget(owner, "Nidalee_Base_Q_Buf.troy", target, 1, "C_BUFFBONE_GLB_Overhead_LOC");
+                    hunt_timer = CreateTimer(4.0f, () =>
+                    {
+                        RemoveParticle(huntParticle);
+                    });
+                }
             }
 
             projectile.SetToRemove();
